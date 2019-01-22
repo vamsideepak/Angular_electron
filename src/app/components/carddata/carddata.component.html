@@ -1,0 +1,92 @@
+
+	<div class="main-container" >
+		<div class="header flex">
+			<div class="header-logo pull-left doNotPrint"><img src="assets/images/logo.jpg"/></div>
+			<div class="header-info pull-right doNotPrint">
+				<div class="login-info">
+					<div>CDTA Admin <span>|</span> Terminal: 1258</div>
+					<div><a href="#">logout</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="content-container container-padding doNotPrint">
+			<h1>Summary</h1>
+		</div>
+		
+		<div class="flex container-padding flex-row" *ngFor="let card of Carddata ">
+			<div class="flex-devide">
+				<div class="flex">
+					<div class="flex-devide">
+						<p>0000003980 - Active</p>
+						<p>Fare Code: Full</p>
+						<p>Card Exp: {{card.card_expiration_date_str}}</p>
+					</div>
+					<div class="flex-devide">
+						<p>Bonus Ride(s): 0</p>
+						<p>Next Bonus: 0/4</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="flex-devide text-right">
+				<button class="page-btns doNotPrint" (click)="printDiv()"><i class="fal fa-print"></i> Print Summary</button>
+				
+				<button class="page-btns doNotPrint"><i class="fal fa-plus-square"></i> Add New Product to Card</button>
+			</div>
+		</div>
+		
+		
+		<div class="content-container container-padding">
+			<h1></h1>
+		</div>
+		
+		<div class="flex container-padding flex-row">
+			<table class="table-css">
+				<tr>
+					<th>Product</th>
+					<th>Description</th>
+					<th>Status</th>
+					<th>Balance</th>
+				</tr>
+				<tr>
+					<td>Pay As You Go</td>
+					<td>Pay As You Go</td>
+					<td>Active</td>
+					<td>$0.00</td>
+				</tr>
+				<tr>
+					<td>Frequent Rider</td>
+					<td>31 Day Pass</td>
+					<td>Active</td>
+					<td>31 Days</td>
+				</tr>
+			
+				<tr>
+					<td>Pay As You Go</td>
+					<td>Pay As You Go</td>
+					<td>Active</td>
+					<td>$0.00</td>
+				</tr>
+				<tr>
+					<td>Frequent Rider</td>
+					<td>31 Day Pass</td>
+					<td>Active</td>
+					<td>31 Days</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="content-container container-padding">
+			<h1></h1>
+			
+			<div class="flex">
+				<div class="flex-devide">
+					<button class="back-btn" (click)= "Back();"><i class="fal fa-long-arrow-left"></i> Back</button>
+				</div>
+			</div>
+						
+		</div>
+		
+	</div>
+
+
